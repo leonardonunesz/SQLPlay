@@ -1,0 +1,38 @@
+DROP DATABASE IF EXISTS JOGOS;
+CREATE DATABASE JOGOS;
+USE JOGOS;
+DROP TABLE IF EXISTS TABLE_tabuleiro_velha, TABLE_historico_partida_velha;
+
+CREATE TABLE TABLE_tabuleiro_velha
+(ID INTEGER PRIMARY KEY AUTO_INCREMENT NOT NULL,
+LINHA INTEGER NOT NULL, 
+COLUNA INTEGER NOT NULL, 
+VALOR TEXT NOT NULL);
+
+CREATE TABLE TABLE_historico_partida_velha
+(ID INTEGER PRIMARY KEY AUTO_INCREMENT NOT NULL,
+JOGADOR TEXT NOT NULL,
+RESULTADO TEXT NOT NULL,
+DATA DATE NOT NULL
+);
+
+INSERT INTO TABLE_tabuleiro_velha (LINHA, COLUNA, VALOR) 
+VALUES (1, 1, 'X'),
+(1, 2, 'X'),
+(1, 3, 'X'),
+(2, 1, 'X'),
+(2, 2, 'X'),
+(2, 3, 'X'),
+(3, 1, 'X'),
+(3, 2, 'X'),
+(3, 3, 'X'),
+(1, 1, 'O'),
+(1, 2, 'O'),
+(1, 3, 'O'),
+(2, 1, 'O'),
+(2, 2, 'O'),
+(2, 3, 'O'),
+(3, 1, 'O'),
+(3, 2, 'O'),
+(3, 3, 'O');
+
