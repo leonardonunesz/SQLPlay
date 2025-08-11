@@ -7,3 +7,34 @@ __pycache__/
 venv/
 .venv/
 .env
+
+# Banco de dados
+*.sqlite3
+*.db
+*.sql
+
+# Migrações Django (opcional - descomente se não quiser versionar)
+# */migrations/*.py
+# !*/migrations/__init__.py
+
+# Arquivos de configuração local
+.env.local
+.env.development
+.env.production
+
+# Logs
+*.log
+
+# Arquivos temporários
+*.tmp
+*.temp
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
