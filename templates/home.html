@@ -1,17 +1,126 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="pt-Br">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SQLPlay - Aprenda SQL Jogando</title>
     <link rel="stylesheet" href="{% static 'style.css' %}" />
-    <title>Página Inicial - Escolha seu Mini Game</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
   </head>
   <body>
-    <h1>Escolha seu Mini Game para começar</h1>
-    <a href="">
-      <p>Jogo da Velha</p>
-      <img src="{% static 'img/jogo_velha.png'%}" alt="" />
-    </a>
+    <div class="container">
+      <!-- Header -->
+      <header class="header">
+        <div class="logo">
+          <i class="fas fa-database"></i>
+          <h1>SQLPlay</h1>
+        </div>
+        <p class="tagline">Aprenda SQL de forma divertida e interativa!</p>
+      </header>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <div class="games-grid">
+          <!-- Jogo da Velha -->
+          <div
+            class="game-card"
+            onclick="window.location.href='{% url 'jogo_da_velha:jogo_da_velha' %}'"
+          >
+            <div class="game-icon">
+              <i class="fas fa-times"></i>
+            </div>
+            <h3>Jogo da Velha</h3>
+            <p>Jogue usando comandos SQL para marcar X e O no tabuleiro</p>
+            <div class="game-features">
+              <span class="feature-tag">UPDATE</span>
+              <span class="feature-tag">SELECT</span>
+            </div>
+            <div class="play-button">
+              <i class="fas fa-play"></i>
+              Jogar
+            </div>
+          </div>
+
+          <!-- Palavra Cruzada SQL (Coming Soon) -->
+          <div class="game-card coming-soon">
+            <div class="game-icon">
+              <i class="fas fa-th-large"></i>
+            </div>
+            <h3>Palavra Cruzada SQL</h3>
+            <p>Complete palavras relacionadas a SQL usando consultas</p>
+            <div class="game-features">
+              <span class="feature-tag">SELECT</span>
+              <span class="feature-tag">WHERE</span>
+            </div>
+            <div class="coming-soon-badge">
+              <i class="fas fa-clock"></i>
+              Em Breve
+            </div>
+          </div>
+
+          <!-- Quebra-cabeça SELECTs (Coming Soon) -->
+          <div class="game-card coming-soon">
+            <div class="game-icon">
+              <i class="fas fa-puzzle-piece"></i>
+            </div>
+            <h3>Quebra-cabeça SELECTs</h3>
+            <p>Monte consultas SQL corretas para resolver puzzles</p>
+            <div class="game-features">
+              <span class="feature-tag">JOIN</span>
+              <span class="feature-tag">GROUP BY</span>
+            </div>
+            <div class="coming-soon-badge">
+              <i class="fas fa-clock"></i>
+              Em Breve
+            </div>
+          </div>
+
+          <!-- Sudoku SQL (Coming Soon) -->
+          <div class="game-card coming-soon">
+            <div class="game-icon">
+              <i class="fas fa-border-all"></i>
+            </div>
+            <h3>Sudoku SQL</h3>
+            <p>Preencha o Sudoku usando comandos SQL para inserir números</p>
+            <div class="game-features">
+              <span class="feature-tag">INSERT</span>
+              <span class="feature-tag">UPDATE</span>
+            </div>
+            <div class="coming-soon-badge">
+              <i class="fas fa-clock"></i>
+              Em Breve
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <p>&copy; 2025 SQLPlay - Aprenda SQL Jogando</p>
+      </footer>
+    </div>
+
+    <script>
+      // Adiciona efeito de hover nos cards clicáveis
+      document
+        .querySelectorAll(".game-card:not(.coming-soon)")
+        .forEach((card) => {
+          card.addEventListener("mouseenter", function () {
+            this.style.transform = "translateY(-5px)";
+          });
+
+          card.addEventListener("mouseleave", function () {
+            this.style.transform = "translateY(0)";
+          });
+        });
+    </script>
   </body>
 </html>
