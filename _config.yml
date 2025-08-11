@@ -1,0 +1,20 @@
+# Configuração do GitHub Pages
+# Este arquivo é usado para configurar o comportamento do GitHub Pages
+
+# Configurações básicas
+title: SQLPlay
+description: Plataforma educacional para aprender SQL através de jogos interativos
+author: @leonardonunesz
+
+# Configurações do Jekyll (desabilitado para sites estáticos)
+# Jekyll é desabilitado para permitir arquivos HTML puros
+plugins: []
+
+# Configurações de build
+build:
+  output: static_site
+
+# Configurações de deploy
+deploy:
+  branch: gh-pages
+  strategy: git
