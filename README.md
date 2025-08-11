@@ -20,6 +20,7 @@ O objetivo principal é auxiliar desenvolvedores e estudantes a aprenderem SQL d
 ## Funcionalidades Implementadas
 
 ### Jogo da Velha SQL
+
 - **Modo Multijogador Local**: Dois jogadores alternando turnos
 - **Modo Single Player**: Jogador contra computador com IA aleatória
 - **Sistema SQL**: Comandos INSERT INTO e UPDATE para fazer jogadas
@@ -47,6 +48,7 @@ O projeto segue uma arquitetura modular e organizada:
 ## Instalação e Configuração
 
 ### Pré-requisitos
+
 - Python 3.8+
 - pip
 - Virtual environment
@@ -54,12 +56,14 @@ O projeto segue uma arquitetura modular e organizada:
 ### Passos para Instalação
 
 1. **Clone o repositório**
+
    ```bash
    git clone https://github.com/leonardonunesz/SQLPlay.git
    cd SQLPlay
    ```
 
 2. **Crie e ative o ambiente virtual**
+
    ```bash
    python3 -m venv venv
    source venv/bin/activate  # Linux/Mac
@@ -68,16 +72,19 @@ O projeto segue uma arquitetura modular e organizada:
    ```
 
 3. **Instale as dependências**
+
    ```bash
    pip install -r requirements.txt
    ```
 
 4. **Execute as migrações**
+
    ```bash
    python manage.py migrate
    ```
 
 5. **Inicie o servidor**
+
    ```bash
    python manage.py runserver
    ```
@@ -88,12 +95,15 @@ O projeto segue uma arquitetura modular e organizada:
 ## Comandos SQL Aceitos
 
 ### Estrutura do Banco
+
 O tabuleiro é representado por uma tabela com as colunas:
+
 - `linha`: posição vertical (0, 1, 2)
 - `coluna`: posição horizontal (0, 1, 2)
 - `valor`: 'X' ou 'O'
 
 ### Exemplos de Comandos
+
 ```sql
 -- Inserir uma jogada
 INSERT INTO tabuleiro (linha, coluna, valor) VALUES (0, 0, 'X');
